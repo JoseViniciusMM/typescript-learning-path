@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
