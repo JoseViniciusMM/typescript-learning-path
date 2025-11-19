@@ -1,33 +1,15 @@
-# 🛒 POS System (Point of Sale) with SQLite
+# 🛒 Sistema PDV (Ponto de Venda) com SQLite
 
-A robust backend simulation for a Point of Sale system, built with **TypeScript** and **SQLite**. This project demonstrates the implementation of **Layered Architecture**, strictly separating data persistence, business rules, and application control.
+Uma simulação robusta de backend para um sistema de Ponto de Venda, construída com **TypeScript** e **SQLite**. Este projeto demonstra a implementação de **Arquitetura em Camadas**, separando estritamente a persistência de dados, regras de negócio e controle da aplicação.
 
-## 🏗️ Architectural Design
+## 🏗️ Design Arquitetural
 
-This project moves away from monolithic scripts to a professional **Separation of Concerns (SoC)** pattern:
-
-| Layer | Responsibility |
-| :--- | :--- |
-| **📂 Models** | Definitions of Data Structures and Interfaces (`User`, `Product`, `Sale`). |
-| **⚙️ Controllers** | Handles incoming requests and orchestrates the flow between Services and Repositories. |
-| **🧠 Services** | **Pure Business Logic.** Calculates discounts, interest rates, and validates rules. |
-| **💾 Repositories** | **Data Access Layer (DAL).** Raw SQL queries to interact with the SQLite database. |
-
-```mermaid
-graph LR
-A[Controller] -- Request --> B[Service]
-B -- Logic Applied --> C[Repository]
-C -- SQL Query --> D[(SQLite DB)]
-
-Payment Method,Condition,Rule Applied
-PIX,Instant Payment,5% Discount on the total sale value.
-Debit Card,Instant Payment,"No discount, no interest (Standard value)."
-Credit Card,Financing,2% Interest added to total. Allows up to 5x installments.
+Este projeto se afasta de scripts monolíticos para um padrão profissional de **Separação de Preocupações (SoC)**:
 
 src/
 ├── controllers/   # SaleController.ts
-├── services/      # SaleService.ts (The brain of the operation)
-├── repositories/  # SaleRepository.ts (SQL execution)
-├── models/        # Interfaces/Types
-├── database/      # DB Connection & Init
-└── index.ts       # Entry point
+├── services/      # SaleService.ts (O cérebro da operação)
+├── repositories/  # SaleRepository.ts (Execução SQL)
+├── models/        # Interfaces/Tipos
+├── database/      # Conexão e Inic. do DB
+└── index.ts       # Ponto de entrada
