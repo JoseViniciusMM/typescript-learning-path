@@ -1,0 +1,1 @@
+{"estudantes":[{"id":1,"nome":"João","email":"joao@gmaiil","curso":"ADS"},{"id":2,"nome":"Maria","email":"maria@gmail","curso":"SI"}],"refeicoes":[{"id":1,"tipo":"Almoço","data":"2023-10-01T00:00:00.000Z","estudanteId":1},{"id":2,"tipo":"Jantar","data":"2023-10-01T00:00:00.000Z","estudanteId":2}]}

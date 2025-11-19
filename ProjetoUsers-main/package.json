@@ -1,0 +1,21 @@
+{
+  "name": "projetousers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx  src3/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "uuid": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.0"
+  }
+}
